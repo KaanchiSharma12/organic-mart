@@ -1,11 +1,10 @@
 import "./Navbar.css";
+import { useNavigate } from "react-router-dom";
 
 import logo from "../../assets/images/green_leaf_logo.png";
 import search from "../../assets/icons/search.png";
 import heart from "../../assets/icons/heart.png";
 import cart from "../../assets/icons/cart.png";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 function Navbar() {
 const navigate = useNavigate();
