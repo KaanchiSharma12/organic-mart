@@ -78,3 +78,54 @@ border-radius:10px;
 cursor:pointer;
 
 }
+
+/* Newsletter Responsive */
+
+
+@media(max-width:700px){
+
+
+.newsletter{
+
+width:85%;
+
+padding:35px 20px;
+
+}
+
+
+.newsletter h2{
+
+font-size:28px;
+
+}
+
+
+.newsletter p{
+
+font-size:14px;
+
+}
+
+
+.subscribe-box{
+
+flex-direction:column;
+
+}
+
+
+.subscribe-box input{
+
+width:auto;
+
+}
+
+
+.subscribe-box button{
+
+width:100%;
+
+}
+
+}
