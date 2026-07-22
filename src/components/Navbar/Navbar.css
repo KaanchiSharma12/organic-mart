@@ -298,6 +298,20 @@ color:#2D6A4F;
 
 }
 
+.user-area{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+color:#2E7D32;
+
+font-weight:600;
+
+}
+
 /* Responsive Navbar */
 
 @media (max-width: 992px){

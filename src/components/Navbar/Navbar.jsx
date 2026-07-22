@@ -4,8 +4,17 @@ import logo from "../../assets/images/green_leaf_logo.png";
 import search from "../../assets/icons/search.png";
 import heart from "../../assets/icons/heart.png";
 import cart from "../../assets/icons/cart.png";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 function Navbar() {
+const navigate = useNavigate();
+
+
+const user = JSON.parse(
+localStorage.getItem("currentUser")
+);
+
   return (
     <>
       <div className="topbar">
@@ -22,7 +31,7 @@ function Navbar() {
 
         <div className="logo">
 
-          <img src={logo} alt="logo"/>
+          <img src={logo} alt="logo" />
 
           <div>
 
@@ -43,7 +52,7 @@ function Navbar() {
 
           <button>
 
-            <img src={search} alt="search"/>
+            <img src={search} alt="search" />
 
           </button>
 
@@ -53,23 +62,60 @@ function Navbar() {
 
           <div className="icon-box">
 
-            <img src={heart} alt="wishlist"/>
+            <img src={heart} alt="wishlist" />
 
           </div>
 
           <div className="icon-box cart">
 
-            <img src={cart} alt="cart"/>
+            <img src={cart} alt="cart" />
 
             <span>2</span>
 
           </div>
 
-          <button className="login-btn">
+{
 
-            Login
+user ?
 
-          </button>
+<div className="user-area">
+
+<span>
+Hi, {user.name}
+</span>
+
+<button
+className="login-btn"
+onClick={()=>{
+
+localStorage.removeItem("currentUser");
+localStorage.removeItem("isLoggedIn");
+
+window.location.reload();
+
+}}
+>
+
+Logout
+
+</button>
+
+
+</div>
+
+
+:
+
+<button
+className="login-btn"
+onClick={()=>navigate("/login")}
+>
+
+Login
+
+</button>
+
+}
 
         </div>
 
