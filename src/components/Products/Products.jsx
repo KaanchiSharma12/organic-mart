@@ -18,8 +18,8 @@ const products=[
 image:apple,
 name:"Fresh Apples",
 category:"Fruits",
-price:"₹180",
-oldPrice:"₹250",
+price:"RS. 180",
+oldPrice:"Rs. 250",
 rating:"4.8"
 },
 
@@ -27,8 +27,8 @@ rating:"4.8"
 image:tomato,
 name:"Organic Tomato",
 category:"Vegetables",
-price:"₹60",
-oldPrice:"₹90",
+price:"Rs. 60",
+oldPrice:"Rs. 90",
 rating:"4.7"
 },
 
@@ -36,8 +36,8 @@ rating:"4.7"
 image:milk,
 name:"Fresh Milk",
 category:"Dairy",
-price:"₹55",
-oldPrice:"₹70",
+price:"Rs. 55",
+oldPrice:"Rs. 70",
 rating:"4.9"
 },
 
@@ -45,8 +45,8 @@ rating:"4.9"
 image:rice,
 name:"Premium Rice",
 category:"Grains",
-price:"₹320",
-oldPrice:"₹450",
+price:"Rs. 320",
+oldPrice:"Rs. 450",
 rating:"4.6"
 },
 
@@ -54,8 +54,8 @@ rating:"4.6"
 image:honey,
 name:"Natural Honey",
 category:"Organic",
-price:"₹280",
-oldPrice:"₹350",
+price:"Rs. 280",
+oldPrice:"Rs. 350",
 rating:"4.8"
 },
 
@@ -63,8 +63,8 @@ rating:"4.8"
 image:coffee,
 name:"Organic Coffee",
 category:"Beverages",
-price:"₹220",
-oldPrice:"₹300",
+price:"Rs. 220",
+oldPrice:"Rs. 300",
 rating:"4.7"
 },
 
@@ -72,8 +72,8 @@ rating:"4.7"
 image:bread,
 name:"Brown Bread",
 category:"Bakery",
-price:"₹45",
-oldPrice:"₹60",
+price:"Rs. 45",
+oldPrice:"Rs. 60",
 rating:"4.5"
 },
 
@@ -81,8 +81,8 @@ rating:"4.5"
 image:orange,
 name:"Fresh Orange",
 category:"Fruits",
-price:"₹120",
-oldPrice:"₹180",
+price:"Rs. 120",
+oldPrice:"Rs. 180",
 rating:"4.8"
 }
 
