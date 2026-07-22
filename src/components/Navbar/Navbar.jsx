@@ -1,18 +1,14 @@
 import "./Navbar.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import logo from "../../assets/images/green_leaf_logo.png";
-import search from "../../assets/icons/search.png";
 import heart from "../../assets/icons/heart.png";
 import cart from "../../assets/icons/cart.png";
 
 function Navbar() {
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
-
-const user = JSON.parse(
-localStorage.getItem("currentUser")
-);
+  const user = JSON.parse(localStorage.getItem("currentUser"));
 
   return (
     <>
@@ -27,113 +23,78 @@ localStorage.getItem("currentUser")
       </div>
 
       <nav className="navbar">
-
-        <div className="logo">
-
+        <div className="logo" onClick={() => navigate("/")} style={{ cursor: "pointer" }}>
           <img src={logo} alt="logo" />
-
           <div>
-
             <h2>OrganicMart</h2>
-
             <span>Fresh Every Day</span>
-
           </div>
-
         </div>
 
         <div className="search-area">
-
           <input
             type="text"
             placeholder="Search organic products..."
           />
-
-          <button>
-
-            <img src={search} alt="search" />
-
+          <button type="button" className="search-btn">
+            {/* Inline SVG Search Icon - Zero Image Issue, 100% Crisp */}
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#ffffff"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
           </button>
-
         </div>
 
         <div className="nav-icons">
-
-          <div className="icon-box">
-
+          {/* Wishlist Icon */}
+          <div className="icon-box" onClick={() => navigate("/wishlist")} title="Wishlist">
             <img src={heart} alt="wishlist" />
-
           </div>
 
-          <div className="icon-box cart">
-
+          {/* Cart Icon */}
+          <div className="icon-box cart" title="Cart">
             <img src={cart} alt="cart" />
-
-            <span>2</span>
-
+            <span className="cart-badge">2</span>
           </div>
 
-{
-
-user ?
-
-<div className="user-area">
-
-<span>
-Hi, {user.name}
-</span>
-
-<button
-className="login-btn"
-onClick={()=>{
-
-localStorage.removeItem("currentUser");
-localStorage.removeItem("isLoggedIn");
-
-window.location.reload();
-
-}}
->
-
-Logout
-
-</button>
-
-
-</div>
-
-
-:
-
-<button
-className="login-btn"
-onClick={()=>navigate("/login")}
->
-
-Login
-
-</button>
-
-}
-
+          {user ? (
+            <div className="user-area">
+              <span>Hi, {user.name}</span>
+              <button
+                className="login-btn"
+                onClick={() => {
+                  localStorage.removeItem("currentUser");
+                  localStorage.removeItem("isLoggedIn");
+                  window.location.reload();
+                }}
+              >
+                Logout
+              </button>
+            </div>
+          ) : (
+            <button className="login-btn" onClick={() => navigate("/login")}>
+              Login
+            </button>
+          )}
         </div>
-
       </nav>
 
       <div className="menu">
-
-        <a href="/">Home</a>
-
-        <a href="/">Shop</a>
-
-        <a href="/">Categories</a>
-
-        <a href="/">Deals</a>
-
-        <a href="/">About</a>
-
-        <a href="/">Contact</a>
-
+        <Link to="/">Home</Link>
+        <Link to="/">Shop</Link>
+        <Link to="/">Categories</Link>
+        <Link to="/">Deals</Link>
+        <Link to="/wishlist">Wishlist</Link>
+        <Link to="/">Contact</Link>
       </div>
     </>
   );

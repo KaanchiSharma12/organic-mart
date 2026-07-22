@@ -1,0 +1,135 @@
+.wishlist-container {
+  max-width: 1150px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+.wishlist-title {
+  font-size: 32px;
+  color: #2D6A4F;
+  font-weight: 700;
+}
+
+.wishlist-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0 25px 0;
+}
+
+.wishlist-table-wrapper {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #EAEAEA;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  overflow-x: auto;
+}
+
+.wishlist-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.wishlist-table th {
+  background-color: #F8FBF8;
+  padding: 16px 20px;
+  font-size: 14px;
+  color: #2D6A4F;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.wishlist-table td {
+  padding: 18px 20px;
+  border-bottom: 1px solid #f3f3f3;
+  vertical-align: middle;
+}
+
+.product-cell {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* REAL IMAGE STYLING */
+.wishlist-product-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #F8FBF8;
+  padding: 4px;
+  border: 1px solid #EAEAEA;
+}
+
+.product-name {
+  font-weight: 600;
+  color: #222;
+  font-size: 15px;
+}
+
+.product-unit {
+  font-size: 12px;
+  color: #888;
+}
+
+.product-price {
+  font-weight: 600;
+  color: #2D6A4F;
+}
+
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.in-stock {
+  background-color: #E3F2FD;
+  color: #1976D2;
+}
+
+.out-stock {
+  background-color: #FFEBEE;
+  color: #D32F2F;
+}
+
+.action-btn {
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-add {
+  background-color: #2D6A4F;
+  color: white;
+}
+
+.btn-add:hover {
+  background-color: #1B4332;
+}
+
+.btn-contact {
+  background-color: #333;
+  color: white;
+}
+
+.remove-icon {
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+.remove-icon:hover {
+  opacity: 1;
+}
