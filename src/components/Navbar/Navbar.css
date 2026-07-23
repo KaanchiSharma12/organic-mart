@@ -157,11 +157,14 @@
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  transition: .3s;
+  transition: .3s ease;
 }
 
 .login-btn:hover {
-  background: #1B4332;
+
+transform:translateY(-2px);
+background:#1f6b32;
+
 }
 
 .menu {

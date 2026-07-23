@@ -1,43 +1,8 @@
 import "./Deals.css";
-
-import fruit from "../../assets/images/fruit.png";
-import vegetables from "../../assets/images/vegetables.png";
-import milk from "../../assets/images/milk.png";
+import deals from "../../data/deals.json";
 
 
 function Deals(){
-
-const deals=[
-
-{
-image:fruit,
-title:"Fresh Fruits Combo",
-desc:"Apple + Orange + Banana",
-price:"Rs. 299",
-old:"Rs. 450",
-discount:"35% OFF"
-},
-
-{
-image:vegetables,
-title:"Organic Vegetable Pack",
-desc:"Fresh Farm Vegetables",
-price:"Rs. 199",
-old:"Rs. 300",
-discount:"30% OFF"
-},
-
-{
-image:milk,
-title:"Fresh Dairy Pack",
-desc:"Milk + Dairy Products",
-price:"Rs. 399",
-old:"Rs. 50",
-discount:"25% OFF"
-}
-
-];
-
 
 return(
 
@@ -68,9 +33,9 @@ View All
 
 
 {
-deals.map((item,index)=>(
+deals.map((item)=>(
 
-<div className="deal-card" key={index}>
+<div className="deal-card" key={item.id}>
 
 
 <div className="deal-discount">

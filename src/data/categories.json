@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Bakery",
+    "items": "25+ Products",
+    "image": "/images/bakery.png"
+  },
+  {
+    "id": 2,
+    "title": "Coffee",
+    "items": "18+ Products",
+    "image": "/images/coffee.png"
+  },
+  {
+    "id": 3,
+    "title": "Vegetables",
+    "items": "45+ Products",
+    "image": "/images/vegetables.png"
+  },
+  {
+    "id": 4,
+    "title": "Fresh Fruits",
+    "items": "32+ Products",
+    "image": "/images/fruit.png"
+  },
+  {
+    "id": 5,
+    "title": "Dairy",
+    "items": "20+ Products",
+    "image": "/images/milk.png"
+  },
+  {
+    "id": 6,
+    "title": "Rice & Grains",
+    "items": "16+ Products",
+    "image": "/images/rice.png"
+  }
+]

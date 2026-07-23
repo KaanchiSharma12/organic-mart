@@ -112,6 +112,21 @@ color:#222;
 
 }
 
+.section-title button {
+  background: #2f8f46;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.section-title button:hover {
+  background: #1f6b32;
+  transform: translateY(-3px);
+}
+
 .category-card p{
 
 font-size:14px;

@@ -1,7 +1,6 @@
 import "./Navbar.css";
 import { useNavigate, Link } from "react-router-dom";
 
-import logo from "../../assets/images/green_leaf_logo.png";
 import heart from "../../assets/icons/heart.png";
 import cart from "../../assets/icons/cart.png";
 
@@ -24,7 +23,7 @@ function Navbar() {
 
       <nav className="navbar">
         <div className="logo" onClick={() => navigate("/")} style={{ cursor: "pointer" }}>
-          <img src={logo} alt="logo" />
+          <img src="/images/green_leaf_logo.png" alt="logo" />
           <div>
             <h2>OrganicMart</h2>
             <span>Fresh Every Day</span>

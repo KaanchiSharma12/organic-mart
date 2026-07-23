@@ -1,0 +1,29 @@
+[
+  {
+    "id":1,
+    "image":"/images/fruit.png",
+    "title":"Fresh Fruits Combo",
+    "desc":"Apple + Orange + Banana",
+    "price":"Rs. 299",
+    "old":"Rs. 450",
+    "discount":"35% OFF"
+  },
+  {
+    "id":2,
+    "image":"/images/vegetables.png",
+    "title":"Organic Vegetable Pack",
+    "desc":"Fresh Farm Vegetables",
+    "price":"Rs. 199",
+    "old":"Rs. 300",
+    "discount":"30% OFF"
+  },
+  {
+    "id":3,
+    "image":"/images/milk.png",
+    "title":"Fresh Dairy Pack",
+    "desc":"Milk + Dairy Products",
+    "price":"Rs. 399",
+    "old":"Rs. 500",
+    "discount":"25% OFF"
+  }
+]

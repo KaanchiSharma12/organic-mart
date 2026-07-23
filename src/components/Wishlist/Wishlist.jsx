@@ -1,48 +1,9 @@
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import "./Wishlist.css";
-
-// Importing real images from your assets
-import appleImg from "../../assets/images/apple.png";
-import potatoImg from "../../assets/images/potato.png";
-import pineappleImg from "../../assets/images/pineapple.png";
-import avocadoImg from "../../assets/images/avocado.png";
+import wishlistItems from "../../data/wishlist.json";
 
 function Wishlist() {
-  const wishlistItems = [
-    {
-      id: 1,
-      name: "Fresh Organic Apple",
-      unit: "2 Pc",
-      price: "Rs. 40.00",
-      status: "In Stock",
-      img: appleImg,
-    },
-    {
-      id: 2,
-      name: "Organic Potato",
-      unit: "1 kg",
-      price: "Rs. 30.00",
-      status: "In Stock",
-      img: potatoImg,
-    },
-    {
-      id: 3,
-      name: "Golden Pineapple",
-      unit: "1 Pc",
-      price: "Rs. 90.00",
-      status: "Out of Stock",
-      img: pineappleImg,
-    },
-    {
-      id: 4,
-      name: "Fresh Avocado",
-      unit: "500g",
-      price: "Rs. 180.00",
-      status: "In Stock",
-      img: avocadoImg,
-    },
-  ];
 
   return (
     <>

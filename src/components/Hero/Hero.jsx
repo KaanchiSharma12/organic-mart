@@ -1,5 +1,4 @@
 import "./Hero.css";
-import heroImage from "../../assets/images/grocery_shop_banner.png";
 
 function Hero() {
   return (
@@ -55,7 +54,7 @@ function Hero() {
 
       <div className="hero-right">
 
-        <img src={heroImage} alt="Organic Grocery" />
+        <img src="/images/grocery_shop_banner.png" alt="Organic Grocery" />
 
         <div className="offer-card">
           <h2>40% OFF</h2>

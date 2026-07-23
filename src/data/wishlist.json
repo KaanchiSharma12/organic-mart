@@ -1,0 +1,34 @@
+[
+  {
+    "id":1,
+    "name":"Fresh Organic Apple",
+    "unit":"2 Pc",
+    "price":"Rs. 40.00",
+    "status":"In Stock",
+    "img":"/images/apple.png"
+  },
+  {
+    "id":2,
+    "name":"Organic Potato",
+    "unit":"1 kg",
+    "price":"Rs. 30.00",
+    "status":"In Stock",
+    "img":"/images/potato.png"
+  },
+  {
+    "id":3,
+    "name":"Golden Pineapple",
+    "unit":"1 Pc",
+    "price":"Rs. 90.00",
+    "status":"Out of Stock",
+    "img":"/images/pineapple.png"
+  },
+  {
+    "id":4,
+    "name":"Fresh Avocado",
+    "unit":"500g",
+    "price":"Rs. 180.00",
+    "status":"In Stock",
+    "img":"/images/avocado.png"
+  }
+]

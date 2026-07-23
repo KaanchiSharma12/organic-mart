@@ -201,6 +201,29 @@ cursor:pointer;
 
 }
 
+.deal-heading button,
+.deal-content button {
+
+  background: #2f8f46;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+}
+
+
+.deal-heading button:hover,
+.deal-content button:hover {
+
+  background: #1f6b32;
+  transform: translateY(-3px);
+
+}
+
+
 /* Deals Responsive */
 
 

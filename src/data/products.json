@@ -1,0 +1,74 @@
+[
+  {
+    "id":1,
+    "name":"Fresh Fruits Combo",
+    "category":"Fruits",
+    "price":199,
+    "oldPrice":249,
+    "rating":4.8,
+    "image":"/images/fruit.png"
+  },
+  {
+    "id":2,
+    "name":"Organic Vegetables",
+    "category":"Vegetables",
+    "price":149,
+    "oldPrice":199,
+    "rating":4.7,
+    "image":"/images/vegetables.png"
+  },
+  {
+    "id":3,
+    "name":"Fresh Milk",
+    "category":"Dairy",
+    "price":79,
+    "oldPrice":99,
+    "rating":4.9,
+    "image":"/images/milk.png"
+  },
+  {
+    "id":4,
+    "name":"Premium Rice",
+    "category":"Grains",
+    "price":399,
+    "oldPrice":450,
+    "rating":4.6,
+    "image":"/images/rice.png"
+  },
+  {
+    "id":5,
+    "name":"Organic Honey",
+    "category":"Organic",
+    "price":299,
+    "oldPrice":399,
+    "rating":4.8,
+    "image":"/images/honey.png"
+  },
+  {
+    "id":6,
+    "name":"Premium Coffee",
+    "category":"Beverages",
+    "price":499,
+    "oldPrice":599,
+    "rating":4.7,
+    "image":"/images/coffee.png"
+  },
+  {
+    "id":7,
+    "name":"Fresh Bread",
+    "category":"Bakery",
+    "price":60,
+    "oldPrice":80,
+    "rating":4.6,
+    "image":"/images/bread.png"
+  },
+  {
+    "id":8,
+    "name":"Fresh Orange",
+    "category":"Fruits",
+    "price":120,
+    "oldPrice":160,
+    "rating":4.5,
+    "image":"/images/orange.png"
+  }
+]
