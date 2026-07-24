@@ -1,74 +1,182 @@
 [
   {
-    "id":1,
-    "name":"Fresh Fruits Combo",
-    "category":"Fruits",
-    "price":199,
-    "oldPrice":249,
-    "rating":4.8,
-    "image":"/images/fruit.png"
+    "id": 1,
+    "name": "Fresh Fruits Combo",
+    "category": "Fruits",
+    "price": 199,
+    "oldPrice": 249,
+    "rating": 4.8,
+    "image": "/images/fruit.png"
   },
   {
-    "id":2,
-    "name":"Organic Vegetables",
-    "category":"Vegetables",
-    "price":149,
-    "oldPrice":199,
-    "rating":4.7,
-    "image":"/images/vegetables.png"
+    "id": 2,
+    "name": "Organic Vegetables",
+    "category": "Vegetables",
+    "price": 149,
+    "oldPrice": 199,
+    "rating": 4.7,
+    "image": "/images/vegetables.png"
   },
   {
-    "id":3,
-    "name":"Fresh Milk",
-    "category":"Dairy",
-    "price":79,
-    "oldPrice":99,
-    "rating":4.9,
-    "image":"/images/milk.png"
+    "id": 3,
+    "name": "Fresh Milk",
+    "category": "Dairy",
+    "price": 79,
+    "oldPrice": 99,
+    "rating": 4.9,
+    "image": "/images/milk.png"
   },
   {
-    "id":4,
-    "name":"Premium Rice",
-    "category":"Grains",
-    "price":399,
-    "oldPrice":450,
-    "rating":4.6,
-    "image":"/images/rice.png"
+    "id": 4,
+    "name": "Premium Rice",
+    "category": "Grains",
+    "price": 399,
+    "oldPrice": 450,
+    "rating": 4.6,
+    "image": "/images/rice.png"
   },
   {
-    "id":5,
-    "name":"Organic Honey",
-    "category":"Organic",
-    "price":299,
-    "oldPrice":399,
-    "rating":4.8,
-    "image":"/images/honey.png"
+    "id": 5,
+    "name": "Organic Honey",
+    "category": "Organic",
+    "price": 299,
+    "oldPrice": 399,
+    "rating": 4.8,
+    "image": "/images/honey.png"
   },
   {
-    "id":6,
-    "name":"Premium Coffee",
-    "category":"Beverages",
-    "price":499,
-    "oldPrice":599,
-    "rating":4.7,
-    "image":"/images/coffee.png"
+    "id": 6,
+    "name": "Premium Coffee",
+    "category": "Beverages",
+    "price": 499,
+    "oldPrice": 599,
+    "rating": 4.7,
+    "image": "/images/coffee.png"
   },
   {
-    "id":7,
-    "name":"Fresh Bread",
-    "category":"Bakery",
-    "price":60,
-    "oldPrice":80,
-    "rating":4.6,
-    "image":"/images/bread.png"
+    "id": 7,
+    "name": "Fresh Bread",
+    "category": "Bakery",
+    "price": 60,
+    "oldPrice": 80,
+    "rating": 4.6,
+    "image": "/images/bread.png"
   },
   {
-    "id":8,
-    "name":"Fresh Orange",
-    "category":"Fruits",
-    "price":120,
-    "oldPrice":160,
-    "rating":4.5,
-    "image":"/images/orange.png"
+    "id": 8,
+    "name": "Fresh Orange",
+    "category": "Fruits",
+    "price": 120,
+    "oldPrice": 160,
+    "rating": 4.5,
+    "image": "/images/orange.png"
+  },
+  {
+    "id": 9,
+    "name": "Fresh Apple",
+    "category": "Fruits",
+    "price": 110,
+    "oldPrice": 140,
+    "rating": 4.8,
+    "image": "/images/apple.png"
+  },
+  {
+    "id": 10,
+    "name": "Fresh Paneer",
+    "category": "Fruits",
+    "price": 70,
+    "oldPrice": 90,
+    "rating": 4.6,
+    "image": "/images/fresh_paneer.png"
+  },
+  {
+    "id": 11,
+    "name": "Organic Broccoli",
+    "category": "Vegetables",
+    "price": 180,
+    "oldPrice": 220,
+    "rating": 4.8,
+    "image": "/images/broccoli.png"
+  },
+  {
+    "id": 12,
+    "name": "Fresh Potato",
+    "category": "Vegetables",
+    "price": 45,
+    "oldPrice": 60,
+    "rating": 4.5,
+    "image": "/images/potato.png"
+  },
+  {
+    "id": 13,
+    "name": "Organic Tomato",
+    "category": "Vegetables",
+    "price": 60,
+    "oldPrice": 80,
+    "rating": 4.7,
+    "image": "/images/tomato.png"
+  },
+  {
+    "id": 14,
+    "name": "Fresh Pineapple",
+    "category": "Fruits",
+    "price": 150,
+    "oldPrice": 190,
+    "rating": 4.8,
+    "image": "/images/pineapple.png"
+  },
+  {
+    "id": 15,
+    "name": "Fresh Avocado",
+    "category": "Fruits",
+    "price": 220,
+    "oldPrice": 280,
+    "rating": 4.9,
+    "image": "/images/avocado.png"
+  },
+  {
+    "id": 16,
+    "name": "Premium Dry Fruits",
+    "category": "Healthy Snacks",
+    "price": 499,
+    "oldPrice": 599,
+    "rating": 4.9,
+    "image": "/images/dry_fruits.webp"
+  },
+  {
+    "id": 17,
+    "name": "Mixed Fruit Juice",
+    "category": "Beverages",
+    "price": 160,
+    "oldPrice": 210,
+    "rating": 4.7,
+    "image": "/images/fruit_juice.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Mango Milkshake",
+    "category": "Beverages",
+    "price": 190,
+    "oldPrice": 240,
+    "rating": 4.8,
+    "image": "/images/mango_milkshake.png"
+  },
+  {
+    "id": 19,
+    "name": "Strawberry Smoothie",
+    "category": "Beverages",
+    "price": 210,
+    "oldPrice": 260,
+    "rating": 4.8,
+    "image": "/images/strawberry.png"
+  },
+  {
+    "id": 20,
+    "name": "Healthy Salad Bowl",
+    "category": "Healthy Food",
+    "price": 180,
+    "oldPrice": 230,
+    "rating": 4.7,
+    "image": "/images/salad.png"
   }
 ]
