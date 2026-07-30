@@ -1,13 +1,15 @@
 import "./Navbar.css";
 import { useNavigate, Link } from "react-router-dom";
 
+import cartIcon from "../../assets/icons/cart.png";
 import heart from "../../assets/icons/heart.png";
-import cart from "../../assets/icons/cart.png";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 function Navbar() {
   const navigate = useNavigate();
-
   const user = JSON.parse(localStorage.getItem("currentUser"));
+  const { cart } = useContext(CartContext);
 
   return (
     <>
@@ -36,7 +38,6 @@ function Navbar() {
             placeholder="Search organic products..."
           />
           <button type="button" className="search-btn">
-            {/* Inline SVG Search Icon - Zero Image Issue, 100% Crisp */}
             <svg
               width="20"
               height="20"
@@ -60,9 +61,9 @@ function Navbar() {
           </div>
 
           {/* Cart Icon */}
-          <div className="icon-box cart" title="Cart">
-            <img src={cart} alt="cart" />
-            <span className="cart-badge">2</span>
+          <div className="icon-box cart" title="Cart" onClick={() => navigate("/cart")}>
+            <img src={cartIcon} alt="cart" />
+            <span className="cart-badge"> {cart.length} </span>
           </div>
 
           {user ? (

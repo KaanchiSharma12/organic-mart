@@ -1,76 +1,137 @@
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+import "./Wishlist.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-import "./Wishlist.css";
-import wishlistItems from "../../data/wishlist.json";
+import { useNavigate } from "react-router-dom";
 
 function Wishlist() {
 
-  return (
-    <>
-      <Navbar />
-      <div className="wishlist-container">
-        <div className="breadcrumb">Home / Shop / My Wishlist</div>
-        <h1 className="wishlist-title">My Wishlist</h1>
-        <p className="wishlist-subtitle">
-          There are {wishlistItems.length} products in this wishlist.
-        </p>
+const navigate = useNavigate();
 
-        <div className="wishlist-table-wrapper">
-          <table className="wishlist-table">
-            <thead>
-              <tr>
-                <th><input type="checkbox" /></th>
-                <th>Product</th>
-                <th>Price</th>
-                <th>Status</th>
-                <th>Actions</th>
-                <th>Remove</th>
-              </tr>
-            </thead>
-            <tbody>
-              {wishlistItems.map((item) => (
-                <tr key={item.id}>
-                  <td><input type="checkbox" /></td>
-                  <td className="product-cell">
-                    <img
-                      src={item.img}
-                      alt={item.name}
-                      className="wishlist-product-img"
-                    />
-                    <div>
-                      <div className="product-name">{item.name}</div>
-                      <div className="product-unit">{item.unit}</div>
-                    </div>
-                  </td>
-                  <td className="product-price">{item.price}</td>
-                  <td>
-                    <span
-                      className={`status-badge ${
-                        item.status === "In Stock" ? "in-stock" : "out-stock"
-                      }`}
-                    >
-                      {item.status}
-                    </span>
-                  </td>
-                  <td>
-                    <button
-                      className={`action-btn ${
-                        item.status === "In Stock" ? "btn-add" : "btn-contact"
-                      }`}
-                    >
-                      {item.status === "In Stock" ? "Add to cart" : "Contact us"}
-                    </button>
-                  </td>
-                  <td className="remove-icon">🗑️</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <Footer />
-    </>
-  );
+const {
+    wishlist,
+    removeWishlist,
+    addToCart
+} = useContext(CartContext);
+
+
+return (
+
+<>
+
+<Navbar/>
+
+
+<div className="wishlist-container">
+
+<h2>My Wishlist</h2>
+
+
+{
+wishlist.length === 0 ?
+
+(
+<div className="empty-wishlist">
+<h3>Your Wishlist is Empty</h3>
+<p>Add your favourite products here.</p>
+</div>
+)
+
+:
+
+(
+
+<table className="wishlist-table">
+
+<thead>
+<tr>
+<th>Product</th>
+<th>Price</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+</thead>
+
+
+<tbody>
+
+{
+wishlist.map((item)=>(
+
+<tr key={item.id}>
+
+<td className="product-column">
+
+<img
+src={item.image}
+alt={item.name}
+className="clickable-image"
+onClick={()=>navigate(`/product/${item.id}`)}
+/>
+
+<span>{item.title}</span>
+
+</td>
+
+
+<td>
+Rs.{item.price}
+</td>
+
+
+<td>
+<span className="stock-status">
+In Stock
+</span>
+</td>
+
+
+<td className="action-column">
+
+<button
+className="cart-button"
+onClick={()=>addToCart(item)}
+>
+Add To Cart
+</button>
+
+
+<button
+className="remove-button"
+onClick={()=>removeWishlist(item.id)}
+>
+Remove
+</button>
+
+
+</td>
+
+
+</tr>
+
+))
+
 }
+
+</tbody>
+
+</table>
+
+)
+
+}
+
+
+</div>
+
+
+<Footer/>
+
+</>
+
+);
+}
+
 
 export default Wishlist;

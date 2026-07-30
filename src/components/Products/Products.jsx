@@ -1,22 +1,24 @@
 import "./Products.css";
 import products from "../../data/products.json";
-import { useNavigate } from "react-router-dom"; // 1. Router hook import kiya
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 function Products() {
-    const navigate = useNavigate(); // 2. Navigate function initialize kiya
-
+    const navigate = useNavigate();
+    const { addToCart } = useContext(CartContext);
     return (
         <section className="products">
             <div className="product-grid">
                 {products.map((product) => (
-                    <div 
-                        className="product-card" 
+                    <div
+                        className="product-card"
                         key={product.id}
-                        onClick={() => navigate(`/product/${product.id}`)} // 3. Click handler add kar diya
+                        onClick={() => navigate(`/product/${product.id}`)}
                         style={{ cursor: "pointer" }}
                     >
-                        <img 
-                            src={product.image} 
+                        <img
+                            src={product.image}
                             alt={product.name}
                         />
 
@@ -29,16 +31,20 @@ function Products() {
                         </div>
 
                         <p className="rating">
-                             {product.rating}
+                            {product.rating}
                         </p>
+                        <button
 
-                        <button 
                             onClick={(e) => {
-                                e.stopPropagation(); // Prevents opening product details when clicking "Add to Cart"
-                                alert(`${product.name} added to cart!`);
+
+                                e.stopPropagation();
+
+                                addToCart(product);
+
                             }}
+
                         >
-                            Add to Cart
+                            Add To Cart
                         </button>
                     </div>
                 ))}
