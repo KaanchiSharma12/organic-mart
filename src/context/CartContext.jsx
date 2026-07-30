@@ -207,7 +207,9 @@ value={{
     addToCart,
     removeFromCart,
     addWishlist,
-    removeWishlist
+    removeWishlist,
+    increaseQty,
+    decreaseQty
 }}
 >
 {children}

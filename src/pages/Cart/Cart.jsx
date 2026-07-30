@@ -76,7 +76,7 @@ onClick={()=>navigate(`/product/${item.id}`)}
 
 
 <h3 className="cart-price">
-₹{item.price}
+Rs.{item.price}
 </h3>
 
 
@@ -156,7 +156,7 @@ Total
 </span>
 
 <span>
-₹{total}
+Rs.{total}
 </span>
 
 </div>
