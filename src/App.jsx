@@ -7,6 +7,7 @@ import Login from "./components/Login/Login";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import Cart from "./pages/Cart/Cart";
 import CartProvider from "./context/CartContext";
+import Checkout from "./pages/Checkout/Checkout";
 
 
 function App() {
@@ -44,6 +45,11 @@ function App() {
           <Route 
             path="/login" 
             element={<Login />} 
+          />
+
+          <Route 
+            path="/checkout" 
+            element={<Checkout/>}
           />
 
         </Routes>

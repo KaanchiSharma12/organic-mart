@@ -6,184 +6,186 @@ import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 
 
-function Cart(){
+function Cart() {
 
-const navigate = useNavigate();
+    const navigate = useNavigate();
 
-const {
-cart,
-removeFromCart,
-increaseQty,
-decreaseQty
-}=useContext(CartContext);
+    const {
+        cart,
+        removeFromCart,
+        increaseQty,
+        decreaseQty
+    } = useContext(CartContext);
 
 
+    const total = cart.reduce(
+        (acc, item) => acc + item.price * item.quantity,
+        0
+    );
 
-const total = cart.reduce(
-(acc,item)=>acc + item.price * item.quantity,
-0
-);
 
 
+    return (
+        <>
+            <Navbar />
 
-return(
-<>
-<Navbar/>
 
+            <div className="cart-container">
 
-<div className="cart-container">
 
+                <h1>My Cart</h1>
 
-<h1>My Cart</h1>
 
+                {
+                    cart.length === 0 ?
 
-{
-cart.length===0 ?
+                        <h2 className="empty-cart">
+                            Your cart is empty
+                        </h2>
 
-<h2 className="empty-cart">
-Your cart is empty
-</h2>
 
+                        :
 
-:
+                        <div className="cart-layout">
 
-<div className="cart-layout">
 
+                            <div className="cart-items">
 
-<div className="cart-items">
 
+                                {
+                                    cart.map(item => (
 
-{
-cart.map(item=>(
 
+                                        <div className="cart-card" key={item.id}>
 
-<div className="cart-card" key={item.id}>
 
+                                            <img
+                                                src={item.image}
+                                                alt={item.name}
+                                                className="clickable-image"
+                                                onClick={() => navigate(`/product/${item.id}`)}
+                                            />
 
-<img 
-src={item.image}
-alt={item.name}
-className="clickable-image"
-onClick={()=>navigate(`/product/${item.id}`)}
-/>
 
+                                            <div className="cart-details">
 
-<div className="cart-details">
+                                                <h3>{item.name}</h3>
 
-<h3>{item.name}</h3>
+                                                <p>{item.category}</p>
 
-<p>{item.category}</p>
 
+                                                <h3 className="cart-price">
+                                                    Rs.{item.price}
+                                                </h3>
 
-<h3 className="cart-price">
-Rs.{item.price}
-</h3>
 
+                                                <div className="qty-box">
 
-<div className="qty-box">
+                                                    <button
+                                                        onClick={() => decreaseQty(item.id)}
+                                                    >
+                                                        -
+                                                    </button>
 
-<button
-onClick={()=>decreaseQty(item.id)}
->
--
-</button>
 
+                                                    <span>
+                                                        {item.quantity}
+                                                    </span>
 
-<span>
-{item.quantity}
-</span>
 
+                                                    <button
+                                                        onClick={() => increaseQty(item.id)}
+                                                    >
+                                                        +
+                                                    </button>
 
-<button
-onClick={()=>increaseQty(item.id)}
->
-+
-</button>
 
+                                                </div>
 
-</div>
 
+                                                <button
+                                                    className="remove"
+                                                    onClick={() => removeFromCart(item.id)}
+                                                >
+                                                    Remove
+                                                </button>
 
-<button
-className="remove"
-onClick={()=>removeFromCart(item.id)}
->
-Remove
-</button>
 
+                                            </div>
 
-</div>
 
+                                        </div>
 
-</div>
 
+                                    ))
 
-))
+                                }
 
-}
 
+                            </div>
 
-</div>
 
 
+                            <div className="summary">
 
-<div className="summary">
 
+                                <h2>
+                                    Order Summary
+                                </h2>
 
-<h2>
-Order Summary
-</h2>
 
+                                <div className="summary-row">
 
-<div className="summary-row">
+                                    <span>
+                                        Items
+                                    </span>
 
-<span>
-Items
-</span>
+                                    <span>
+                                        {cart.length}
+                                    </span>
 
-<span>
-{cart.length}
-</span>
+                                </div>
 
-</div>
 
 
+                                <div className="summary-row">
 
-<div className="summary-row">
+                                    <span>
+                                        Total
+                                    </span>
 
-<span>
-Total
-</span>
+                                    <span>
+                                        Rs.{total}
+                                    </span>
 
-<span>
-Rs.{total}
-</span>
+                                </div>
 
-</div>
 
 
+                                <button className="checkout" onClick={() => {
+                                    if (cart.length > 0) { navigate("/checkout"); }
+                                    else {
+                                        alert("Your cart is empty");
+                                    }
+                                }}>   Proceed To Checkout   </button>
 
-<button className="checkout">
-Proceed To Checkout
-</button>
 
+                            </div>
 
-</div>
 
+                        </div>
 
-</div>
 
+                }
 
-}
 
+            </div>
 
-</div>
 
+            <Footer />
 
-<Footer/>
-
-</>
-)
+        </>
+    )
 
 }
 
